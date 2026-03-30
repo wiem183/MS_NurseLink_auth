@@ -1,0 +1,17 @@
+2026-03-10 22:03:03 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-10 22:03:03 | INFO     | app.auth | [LOGIN] Attempt | email=ammoula@example.com
+2026-03-10 22:03:03 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-10 22:03:03 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-10 22:03:04 | INFO     | app.auth | [LOGIN] Success | email=ammoula@example.com id=df3ace9e-9b1a-4941-9463-4f0d1598613b role=UserRole.NURSE
+2026-03-10 22:03:04 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ammoula@example.com id=df3ace9e-9b1a-4941-9463-4f0d1598613b
+2026-03-10 22:04:26 | INFO     | app.auth | [REGISTER] Attempt | email=krid@example.com role=UserRole.NURSE
+2026-03-10 22:04:26 | INFO     | app.auth | [REGISTER] User created | id=257d9610-1eed-497f-9f8d-5d9e22570c3e email=krid@example.com role=UserRole.NURSE
+2026-03-10 22:04:29 | ERROR    | app.services.profile_client | Could not reach profile service for user 257d9610-1eed-497f-9f8d-5d9e22570c3e: All connection attempts failed
+2026-03-10 22:04:29 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=257d9610-1eed-497f-9f8d-5d9e22570c3e
+2026-03-10 22:04:29 | INFO     | app.auth | [OTP] New OTP created | email=krid@example.com purpose=email_verification expires_in=30min
+2026-03-10 22:04:34 | INFO     | app.auth | [OTP] Email sent successfully | email=krid@example.com purpose=email_verification
+2026-03-10 22:04:34 | INFO     | app.auth | [REGISTER] Success | email=krid@example.com
+2026-03-10 22:04:34 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=krid@example.com id=257d9610-1eed-497f-9f8d-5d9e22570c3e
+2026-03-10 22:04:49 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=krid@example.com
+2026-03-10 22:04:49 | INFO     | app.auth | [OTP] Consumed successfully | email=krid@example.com purpose=email_verification
+2026-03-10 22:04:49 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=krid@example.com id=257d9610-1eed-497f-9f8d-5d9e22570c3e

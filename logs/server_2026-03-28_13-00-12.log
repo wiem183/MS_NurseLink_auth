@@ -1,0 +1,51 @@
+2026-03-28 13:17:20 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-28 13:17:20 | INFO     | app.auth | [REGISTER] Attempt | email=demo@client.com role=UserRole.PATIENT
+2026-03-28 13:17:20 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-28 13:17:20 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-28 13:17:21 | INFO     | app.auth | [REGISTER] User created | id=1cd802d9-0b9c-464c-bcd0-811a0bd3a56f email=demo@client.com role=UserRole.PATIENT
+2026-03-28 13:17:21 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=1cd802d9-0b9c-464c-bcd0-811a0bd3a56f role=client
+2026-03-28 13:17:22 | INFO     | app.services.profile_client | Profile service response | status=500 body=Internal Server Error
+2026-03-28 13:17:22 | ERROR    | app.services.profile_client | Profile service HTTP error for user 1cd802d9-0b9c-464c-bcd0-811a0bd3a56f: 500 - Internal Server Error
+2026-03-28 13:18:45 | INFO     | app.auth | [REGISTER] Attempt | email=demo@nurse.com role=UserRole.NURSE
+2026-03-28 13:18:45 | INFO     | app.auth | [REGISTER] User created | id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304 email=demo@nurse.com role=UserRole.NURSE
+2026-03-28 13:18:45 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304 role=nurse
+2026-03-28 13:18:46 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"0c3e8660-1ac9-4fe6-957b-839fc1ef4304","role":"nurse"}
+2026-03-28 13:18:46 | INFO     | app.services.profile_client | Profile created successfully for user 0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 13:18:46 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 13:18:46 | INFO     | app.auth | [OTP] New OTP created | email=demo@nurse.com purpose=email_verification expires_in=30min
+2026-03-28 13:18:49 | INFO     | app.auth | [OTP] Email sent successfully | email=demo@nurse.com purpose=email_verification
+2026-03-28 13:18:49 | INFO     | app.auth | [REGISTER] Success | email=demo@nurse.com
+2026-03-28 13:18:49 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=demo@nurse.com id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 13:19:04 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=demo@nurse.com
+2026-03-28 13:19:04 | INFO     | app.auth | [OTP] Consumed successfully | email=demo@nurse.com purpose=email_verification
+2026-03-28 13:19:04 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=demo@nurse.com id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 13:35:11 | INFO     | app.auth | [LOGIN] Attempt | email=demo@nurse.com
+2026-03-28 13:35:12 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=demo@nurse.com id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 13:38:41 | INFO     | app.auth | [LOGIN] Attempt | email=demo@nurse.com
+2026-03-28 13:38:42 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=demo@nurse.com id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 14:12:49 | INFO     | app.auth | [LOGIN] Attempt | email=demo@nurse.com
+2026-03-28 14:12:49 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=demo@nurse.com id=0c3e8660-1ac9-4fe6-957b-839fc1ef4304
+2026-03-28 14:15:40 | INFO     | app.auth | [REGISTER] Attempt | email=demo@client.com role=UserRole.NURSE
+2026-03-28 14:15:40 | INFO     | app.auth | [REGISTER] User created | id=4b2ecb94-73f5-48ee-96bb-07a77b8c592e email=demo@client.com role=UserRole.NURSE
+2026-03-28 14:15:40 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=4b2ecb94-73f5-48ee-96bb-07a77b8c592e role=nurse
+2026-03-28 14:15:41 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"4b2ecb94-73f5-48ee-96bb-07a77b8c592e","role":"nurse"}
+2026-03-28 14:15:41 | INFO     | app.services.profile_client | Profile created successfully for user 4b2ecb94-73f5-48ee-96bb-07a77b8c592e
+2026-03-28 14:15:41 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=4b2ecb94-73f5-48ee-96bb-07a77b8c592e
+2026-03-28 14:15:41 | INFO     | app.auth | [OTP] New OTP created | email=demo@client.com purpose=email_verification expires_in=30min
+2026-03-28 14:15:44 | ERROR    | app.auth | [OTP] SMTP error | email=demo@client.com purpose=email_verification error=Connection unexpectedly closed
+2026-03-28 14:16:09 | INFO     | app.auth | [REGISTER] Attempt | email=dmo@example.com role=UserRole.NURSE
+2026-03-28 14:16:10 | INFO     | app.auth | [REGISTER] User created | id=3274468b-66aa-4046-864b-4204a145cdc0 email=dmo@example.com role=UserRole.NURSE
+2026-03-28 14:16:10 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=3274468b-66aa-4046-864b-4204a145cdc0 role=nurse
+2026-03-28 14:16:10 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"3274468b-66aa-4046-864b-4204a145cdc0","role":"nurse"}
+2026-03-28 14:16:10 | INFO     | app.services.profile_client | Profile created successfully for user 3274468b-66aa-4046-864b-4204a145cdc0
+2026-03-28 14:16:10 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=3274468b-66aa-4046-864b-4204a145cdc0
+2026-03-28 14:16:10 | INFO     | app.auth | [OTP] New OTP created | email=dmo@example.com purpose=email_verification expires_in=30min
+2026-03-28 14:16:13 | ERROR    | app.auth | [OTP] SMTP error | email=dmo@example.com purpose=email_verification error=Connection unexpectedly closed
+2026-03-28 14:16:27 | INFO     | app.auth | [REGISTER] Attempt | email=demo@example.com role=UserRole.NURSE
+2026-03-28 14:16:27 | INFO     | app.auth | [REGISTER] User created | id=d178f2f9-76c5-4ca8-99f8-1bbc798876ba email=demo@example.com role=UserRole.NURSE
+2026-03-28 14:16:27 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=d178f2f9-76c5-4ca8-99f8-1bbc798876ba role=nurse
+2026-03-28 14:16:28 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"d178f2f9-76c5-4ca8-99f8-1bbc798876ba","role":"nurse"}
+2026-03-28 14:16:28 | INFO     | app.services.profile_client | Profile created successfully for user d178f2f9-76c5-4ca8-99f8-1bbc798876ba
+2026-03-28 14:16:28 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=d178f2f9-76c5-4ca8-99f8-1bbc798876ba
+2026-03-28 14:16:28 | INFO     | app.auth | [OTP] New OTP created | email=demo@example.com purpose=email_verification expires_in=30min
+2026-03-28 14:16:30 | ERROR    | app.auth | [OTP] SMTP error | email=demo@example.com purpose=email_verification error=Connection unexpectedly closed

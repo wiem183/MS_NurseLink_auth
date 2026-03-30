@@ -1,0 +1,5 @@
+2026-03-27 15:28:19 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-27 15:28:19 | INFO     | app.auth | [REGISTER] Attempt | email=rim@krid.com role=UserRole.NURSE
+2026-03-27 15:28:19 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-27 15:28:19 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-27 15:28:19 | INFO     | app.auth | [REGISTER] User created | id=3f2e3cf4-2de9-40b6-a5d2-e8cf7ba87586 email=rim@krid.com role=UserRole.NURSE

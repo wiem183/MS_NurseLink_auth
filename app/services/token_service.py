@@ -12,17 +12,31 @@ from app.schemas.auth import JwtPayload
 class TokenService:
     # ── Access token ──────────────────────────────────────────────────────────
 
-    def create_access_token(self, user_id: uuid.UUID, role: str) -> str:
-        """Sign and return a short-lived JWT access token."""
+    def create_access_token(
+        self,
+        user_id: uuid.UUID,
+        role: str,
+        user_created_at: datetime | None = None,
+    ) -> str:
+        """Sign and return a short-lived JWT access token.
+
+        Other services sometimes need the original user creation timestamp
+        (not the token issuance time).  If ``user_created_at`` is provided
+        it will be encoded as ``created_at`` in the payload as a unix
+        timestamp.
+        """
         now = datetime.now(tz=timezone.utc)
         expire = now + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
 
-        payload = {
+        payload: dict[str, object] = {
             "sub": str(user_id),
             "role": role,
             "iat": int(now.timestamp()),
             "exp": int(expire.timestamp()),
         }
+        if user_created_at is not None:
+            payload["created_at"] = int(user_created_at.replace(tzinfo=timezone.utc).timestamp())
+
         return jwt.encode(payload, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
     def verify_access_token(self, token: str) -> JwtPayload:

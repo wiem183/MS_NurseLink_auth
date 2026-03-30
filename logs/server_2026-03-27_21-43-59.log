@@ -1,0 +1,13 @@
+2026-03-27 21:47:19 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-27 21:47:19 | INFO     | app.auth | [REGISTER] Attempt | email=abir@example.com role=UserRole.NURSE
+2026-03-27 21:47:19 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-27 21:47:19 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-27 21:47:20 | INFO     | app.auth | [REGISTER] User created | id=c258c397-6b2d-4d96-a473-9e9932a86c6c email=abir@example.com role=UserRole.NURSE
+2026-03-27 21:47:20 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8080/internal/profiles user_id=c258c397-6b2d-4d96-a473-9e9932a86c6c role=nurse
+2026-03-27 21:47:20 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"c258c397-6b2d-4d96-a473-9e9932a86c6c","role":"nurse"}
+2026-03-27 21:47:20 | INFO     | app.services.profile_client | Profile created successfully for user c258c397-6b2d-4d96-a473-9e9932a86c6c
+2026-03-27 21:47:20 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=c258c397-6b2d-4d96-a473-9e9932a86c6c
+2026-03-27 21:47:20 | INFO     | app.auth | [OTP] New OTP created | email=abir@example.com purpose=email_verification expires_in=30min
+2026-03-27 21:47:25 | INFO     | app.auth | [OTP] Email sent successfully | email=abir@example.com purpose=email_verification
+2026-03-27 21:47:25 | INFO     | app.auth | [REGISTER] Success | email=abir@example.com
+2026-03-27 21:47:25 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=abir@example.com id=c258c397-6b2d-4d96-a473-9e9932a86c6c

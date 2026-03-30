@@ -1,0 +1,6 @@
+2026-03-30 13:12:44 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-30 13:12:44 | INFO     | app.auth | [LOGIN] Attempt | email=riadh.krid@example.com
+2026-03-30 13:12:44 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-30 13:12:44 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-30 13:12:44 | INFO     | app.auth | [LOGIN] Success | email=riadh.krid@example.com id=212fc4ed-3f3e-4718-9566-d0899c48a943 role=UserRole.NURSE
+2026-03-30 13:12:44 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=riadh.krid@example.com id=212fc4ed-3f3e-4718-9566-d0899c48a943

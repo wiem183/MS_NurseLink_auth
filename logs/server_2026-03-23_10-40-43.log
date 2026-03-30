@@ -1,0 +1,14 @@
+2026-03-23 10:44:45 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-23 10:44:45 | INFO     | app.auth | [REGISTER] Attempt | email=iheb@example.com role=UserRole.NURSE
+2026-03-23 10:44:45 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-23 10:44:45 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-23 10:44:45 | INFO     | app.auth | [REGISTER] User created | id=7866d31c-2ddb-4a70-8499-f8cc2a073ad6 email=iheb@example.com role=UserRole.NURSE
+2026-03-23 10:44:48 | ERROR    | app.services.profile_client | Could not reach profile service for user 7866d31c-2ddb-4a70-8499-f8cc2a073ad6: All connection attempts failed
+2026-03-23 10:44:48 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=7866d31c-2ddb-4a70-8499-f8cc2a073ad6
+2026-03-23 10:44:48 | INFO     | app.auth | [OTP] New OTP created | email=iheb@example.com purpose=email_verification expires_in=30min
+2026-03-23 10:44:50 | INFO     | app.auth | [OTP] Email sent successfully | email=iheb@example.com purpose=email_verification
+2026-03-23 10:44:50 | INFO     | app.auth | [REGISTER] Success | email=iheb@example.com
+2026-03-23 10:44:50 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=iheb@example.com id=7866d31c-2ddb-4a70-8499-f8cc2a073ad6
+2026-03-23 10:45:03 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=iheb@example.com
+2026-03-23 10:45:03 | INFO     | app.auth | [OTP] Consumed successfully | email=iheb@example.com purpose=email_verification
+2026-03-23 10:45:03 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=iheb@example.com id=7866d31c-2ddb-4a70-8499-f8cc2a073ad6

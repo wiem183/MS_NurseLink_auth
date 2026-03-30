@@ -1,0 +1,25 @@
+2026-03-29 00:46:19 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-29 00:46:19 | INFO     | app.auth | [REGISTER] Attempt | email=aymen@abid.com role=UserRole.NURSE
+2026-03-29 00:46:19 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-29 00:46:19 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-29 00:46:19 | INFO     | app.auth | [REGISTER] User created | id=8880f579-a3d6-4ed0-8faa-bcb5235d6255 email=aymen@abid.com role=UserRole.NURSE
+2026-03-29 00:46:19 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=8880f579-a3d6-4ed0-8faa-bcb5235d6255 role=nurse
+2026-03-29 00:46:22 | ERROR    | app.services.profile_client | Could not reach profile service for user 8880f579-a3d6-4ed0-8faa-bcb5235d6255: All connection attempts failed
+2026-03-29 00:47:52 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-03-29 00:47:52 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-03-29 00:47:52 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-03-29 00:50:09 | INFO     | app.auth | [REGISTER] Attempt | email=ahmedkriddd@gmail.com role=UserRole.NURSE
+2026-03-29 00:50:10 | INFO     | app.auth | [REGISTER] User created | id=de9e329d-1bb0-4de7-b16a-7cdeae8c3911 email=ahmedkriddd@gmail.com role=UserRole.NURSE
+2026-03-29 00:50:10 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=de9e329d-1bb0-4de7-b16a-7cdeae8c3911 role=nurse
+2026-03-29 00:50:12 | ERROR    | app.services.profile_client | Could not reach profile service for user de9e329d-1bb0-4de7-b16a-7cdeae8c3911: All connection attempts failed
+2026-03-29 00:50:36 | INFO     | app.auth | [LOGIN] Attempt | email=aymen@abid.com
+2026-03-29 00:50:36 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=aymen@abid.com
+2026-03-29 00:50:46 | INFO     | app.auth | [LOGIN] Attempt | email=aymen@example.com
+2026-03-29 00:50:46 | INFO     | app.auth | [LOGIN] Success | email=aymen@example.com id=06261986-f48b-4e7c-a77f-c4d81adcca61 role=UserRole.PATIENT
+2026-03-29 00:50:46 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=aymen@example.com id=06261986-f48b-4e7c-a77f-c4d81adcca61
+2026-03-29 00:55:46 | INFO     | app.auth | [REGISTER] Attempt | email=ahmedkridd@gmail.com role=UserRole.NURSE
+2026-03-29 00:55:46 | WARNING  | app.auth | [REGISTER] Conflict — email already exists | email=ahmedkridd@gmail.com
+2026-03-29 00:55:52 | INFO     | app.auth | [REGISTER] Attempt | email=ahmedkridd60@gmail.com role=UserRole.NURSE
+2026-03-29 00:55:52 | INFO     | app.auth | [REGISTER] User created | id=cd892f96-9d9b-4799-8e06-244fc5cb4f20 email=ahmedkridd60@gmail.com role=UserRole.NURSE
+2026-03-29 00:55:52 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=cd892f96-9d9b-4799-8e06-244fc5cb4f20 role=nurse
+2026-03-29 00:55:55 | ERROR    | app.services.profile_client | Could not reach profile service for user cd892f96-9d9b-4799-8e06-244fc5cb4f20: All connection attempts failed

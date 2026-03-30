@@ -1,0 +1,14 @@
+2026-03-27 01:53:22 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-27 01:53:22 | INFO     | app.auth | [REGISTER] Attempt | email=halweni@example.com role=UserRole.NURSE
+2026-03-27 01:53:22 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-27 01:53:22 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-27 01:53:22 | INFO     | app.auth | [REGISTER] User created | id=d2bea304-d371-4d10-84db-35413db6d448 email=halweni@example.com role=UserRole.NURSE
+2026-03-27 01:53:23 | ERROR    | app.services.profile_client | Profile service returned error for user d2bea304-d371-4d10-84db-35413db6d448: 500 - Internal Server Error
+2026-03-27 01:53:23 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=d2bea304-d371-4d10-84db-35413db6d448
+2026-03-27 01:53:23 | INFO     | app.auth | [OTP] New OTP created | email=halweni@example.com purpose=email_verification expires_in=30min
+2026-03-27 01:53:26 | INFO     | app.auth | [OTP] Email sent successfully | email=halweni@example.com purpose=email_verification
+2026-03-27 01:53:26 | INFO     | app.auth | [REGISTER] Success | email=halweni@example.com
+2026-03-27 01:53:27 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=halweni@example.com id=d2bea304-d371-4d10-84db-35413db6d448
+2026-03-27 01:53:46 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@example.com
+2026-03-27 01:53:46 | INFO     | app.auth | [LOGIN] Success | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c role=UserRole.PATIENT
+2026-03-27 01:53:46 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c

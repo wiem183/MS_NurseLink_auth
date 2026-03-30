@@ -1,7 +1,7 @@
 import uuid
 
 from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from jose import JWTError
 
 from app.core.dependencies import get_token_service, get_user_repository
@@ -9,12 +9,12 @@ from app.models.user import User
 from app.repositories.user_repository import UserRepository
 from app.services.token_service import TokenService
 
-# Tells FastAPI where clients send their token (used for /docs Authorize UI)
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+# JWT Bearer only — Swagger Authorize will ask for the token string (no username/password)
+http_bearer = HTTPBearer(scheme_name="JWT", auto_error=True)
 
 
 async def get_current_user(
-    token: str = Depends(oauth2_scheme),
+    credentials: HTTPAuthorizationCredentials = Depends(http_bearer),
     token_service: TokenService = Depends(get_token_service),
     user_repo: UserRepository = Depends(get_user_repository),
 ) -> User:
@@ -23,6 +23,7 @@ async def get_current_user(
     Validates the Bearer JWT and returns the live User ORM object.
     Raises HTTP 401 on any failure.
     """
+    token = credentials.credentials
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials.",

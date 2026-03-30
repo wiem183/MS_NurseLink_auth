@@ -1,0 +1,53 @@
+2026-03-10 21:09:02 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-10 21:09:02 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-03-10 21:09:02 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-10 21:09:02 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-10 21:09:02 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-03-10 21:09:02 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-03-10 21:41:08 | INFO     | app.auth | [PASSWORD_RESET] Reset requested | email=ahmed@example.com
+2026-03-10 21:41:08 | INFO     | app.auth | [OTP] New OTP created | email=ahmed@example.com purpose=password_reset expires_in=30min
+2026-03-10 21:41:14 | INFO     | app.auth | [OTP] Email sent successfully | email=ahmed@example.com purpose=password_reset
+2026-03-10 21:41:14 | INFO     | app.auth | [PASSWORD_RESET] OTP sent | email=ahmed@example.com
+2026-03-10 21:41:36 | INFO     | app.auth | [PASSWORD_RESET] OTP verify attempt | email=ahmed@example.com
+2026-03-10 21:41:36 | INFO     | app.auth | [OTP] Consumed successfully | email=ahmed@example.com purpose=password_reset
+2026-03-10 21:41:36 | INFO     | app.auth | [PASSWORD_RESET] OTP verified — reset token issued | email=ahmed@example.com
+2026-03-10 21:41:58 | INFO     | app.auth | [PASSWORD_RESET] Password change attempt | email=ahmed@example.com
+2026-03-10 21:41:58 | INFO     | app.auth | [PASSWORD_RESET] Password updated successfully | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c
+2026-03-10 21:42:34 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@example.com
+2026-03-10 21:42:34 | INFO     | app.auth | [LOGIN] Success | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c role=UserRole.PATIENT
+2026-03-10 21:42:34 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c
+2026-03-10 21:43:50 | INFO     | app.auth | [REGISTER] Attempt | email=ahmoula@example.com role=UserRole.NURSE
+2026-03-10 21:43:50 | INFO     | app.auth | [REGISTER] User created | id=5003f7fc-b8a4-42f0-8947-cff354d084f9 email=ahmoula@example.com role=UserRole.NURSE
+2026-03-10 21:43:53 | ERROR    | app.services.profile_client | Could not reach profile service for user 5003f7fc-b8a4-42f0-8947-cff354d084f9: All connection attempts failed
+2026-03-10 21:43:53 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=5003f7fc-b8a4-42f0-8947-cff354d084f9
+2026-03-10 21:43:53 | INFO     | app.auth | [OTP] New OTP created | email=ahmoula@example.com purpose=email_verification expires_in=30min
+2026-03-10 21:43:57 | INFO     | app.auth | [OTP] Email sent successfully | email=ahmoula@example.com purpose=email_verification
+2026-03-10 21:43:57 | INFO     | app.auth | [REGISTER] Success | email=ahmoula@example.com
+2026-03-10 21:43:57 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmoula@example.com id=5003f7fc-b8a4-42f0-8947-cff354d084f9
+2026-03-10 21:44:23 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=ahmoula@example.com
+2026-03-10 21:44:23 | INFO     | app.auth | [OTP] Consumed successfully | email=ahmoula@example.com purpose=email_verification
+2026-03-10 21:44:23 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=ahmoula@example.com id=5003f7fc-b8a4-42f0-8947-cff354d084f9
+2026-03-10 21:52:07 | INFO     | app.auth | [LOGIN] Attempt | email=ammoula@example.com
+2026-03-10 21:52:07 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ammoula@example.com
+2026-03-10 21:52:22 | INFO     | app.auth | [LOGIN] Attempt | email=ammoula@example.com
+2026-03-10 21:52:22 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ammoula@example.com
+2026-03-10 21:52:29 | INFO     | app.auth | [LOGIN] Attempt | email=amoula@example.com
+2026-03-10 21:52:29 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=amoula@example.com
+2026-03-10 21:52:36 | INFO     | app.auth | [LOGIN] Attempt | email=ammoula@exemple.com
+2026-03-10 21:52:36 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ammoula@exemple.com
+2026-03-10 21:54:49 | INFO     | app.auth | [LOGIN] Attempt | email=ahmoula@exemple.com
+2026-03-10 21:54:49 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ahmoula@exemple.com
+2026-03-10 21:54:57 | INFO     | app.auth | [LOGIN] Attempt | email=ahmoula@example.com
+2026-03-10 21:54:57 | INFO     | app.auth | [LOGIN] Success | email=ahmoula@example.com id=5003f7fc-b8a4-42f0-8947-cff354d084f9 role=UserRole.NURSE
+2026-03-10 21:54:57 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmoula@example.com id=5003f7fc-b8a4-42f0-8947-cff354d084f9
+2026-03-10 21:55:49 | INFO     | app.auth | [REGISTER] Attempt | email=ammoula@example.com role=UserRole.NURSE
+2026-03-10 21:55:49 | INFO     | app.auth | [REGISTER] User created | id=df3ace9e-9b1a-4941-9463-4f0d1598613b email=ammoula@example.com role=UserRole.NURSE
+2026-03-10 21:55:51 | ERROR    | app.services.profile_client | Could not reach profile service for user df3ace9e-9b1a-4941-9463-4f0d1598613b: All connection attempts failed
+2026-03-10 21:55:51 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=df3ace9e-9b1a-4941-9463-4f0d1598613b
+2026-03-10 21:55:51 | INFO     | app.auth | [OTP] New OTP created | email=ammoula@example.com purpose=email_verification expires_in=30min
+2026-03-10 21:55:55 | INFO     | app.auth | [OTP] Email sent successfully | email=ammoula@example.com purpose=email_verification
+2026-03-10 21:55:55 | INFO     | app.auth | [REGISTER] Success | email=ammoula@example.com
+2026-03-10 21:55:55 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ammoula@example.com id=df3ace9e-9b1a-4941-9463-4f0d1598613b
+2026-03-10 21:56:09 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=ammoula@example.com
+2026-03-10 21:56:09 | INFO     | app.auth | [OTP] Consumed successfully | email=ammoula@example.com purpose=email_verification
+2026-03-10 21:56:09 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=ammoula@example.com id=df3ace9e-9b1a-4941-9463-4f0d1598613b

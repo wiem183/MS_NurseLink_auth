@@ -1,0 +1,27 @@
+2026-03-29 02:25:41 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-29 02:25:41 | INFO     | app.auth | [LOGIN] Attempt | email=user@user.com
+2026-03-29 02:25:41 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-29 02:25:41 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-29 02:25:41 | INFO     | app.auth | [LOGIN] Success | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972 role=UserRole.NURSE
+2026-03-29 02:25:41 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972
+2026-03-29 02:31:04 | INFO     | app.auth | [LOGIN] Attempt | email=user@user.com
+2026-03-29 02:31:04 | INFO     | app.auth | [LOGIN] Success | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972 role=UserRole.NURSE
+2026-03-29 02:31:04 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972
+2026-03-29 02:31:47 | INFO     | app.auth | [LOGIN] Attempt | email=user@user.com
+2026-03-29 02:31:47 | INFO     | app.auth | [LOGIN] Success | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972 role=UserRole.NURSE
+2026-03-29 02:31:47 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=user@user.com id=2c91daa8-f676-4797-ba6f-beb2fd574972
+2026-03-29 02:33:21 | INFO     | app.auth | [REGISTER] Attempt | email=wiem@wiem.com role=UserRole.NURSE
+2026-03-29 02:33:21 | INFO     | app.auth | [REGISTER] User created | id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f email=wiem@wiem.com role=UserRole.NURSE
+2026-03-29 02:33:21 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f role=nurse
+2026-03-29 02:33:27 | WARNING  | app.services.profile_client | Could not reach profile service for user 08df3fd0-35eb-4101-838d-e76ebf7a2f9f (non-fatal): 
+2026-03-29 02:33:27 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f
+2026-03-29 02:33:27 | INFO     | app.auth | [OTP] New OTP created | email=wiem@wiem.com purpose=email_verification expires_in=30min
+2026-03-29 02:33:29 | INFO     | app.auth | [OTP] Email sent successfully | email=wiem@wiem.com purpose=email_verification
+2026-03-29 02:33:29 | INFO     | app.auth | [REGISTER] Success | email=wiem@wiem.com
+2026-03-29 02:33:29 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=wiem@wiem.com id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f
+2026-03-29 02:33:40 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=wiem@wiem.com
+2026-03-29 02:33:40 | INFO     | app.auth | [OTP] Consumed successfully | email=wiem@wiem.com purpose=email_verification
+2026-03-29 02:33:40 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=wiem@wiem.com id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f
+2026-03-29 02:35:18 | INFO     | app.auth | [LOGIN] Attempt | email=wiem@wiem.com
+2026-03-29 02:35:18 | INFO     | app.auth | [LOGIN] Success | email=wiem@wiem.com id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f role=UserRole.NURSE
+2026-03-29 02:35:18 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=wiem@wiem.com id=08df3fd0-35eb-4101-838d-e76ebf7a2f9f

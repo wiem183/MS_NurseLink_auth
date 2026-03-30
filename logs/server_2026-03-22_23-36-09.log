@@ -1,0 +1,28 @@
+2026-03-22 23:57:29 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-22 23:57:30 | INFO     | app.auth | [REGISTER] Attempt | email=wiem@rouissi.com role=UserRole.NURSE
+2026-03-22 23:57:30 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-22 23:57:30 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-22 23:57:30 | INFO     | app.auth | [REGISTER] User created | id=b5438643-c05e-40ed-b5c9-ec1987feb99a email=wiem@rouissi.com role=UserRole.NURSE
+2026-03-22 23:57:31 | ERROR    | app.services.profile_client | Profile service returned error for user b5438643-c05e-40ed-b5c9-ec1987feb99a: 500 - Internal Server Error
+2026-03-22 23:57:31 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=b5438643-c05e-40ed-b5c9-ec1987feb99a
+2026-03-22 23:57:31 | INFO     | app.auth | [OTP] New OTP created | email=wiem@rouissi.com purpose=email_verification expires_in=30min
+2026-03-22 23:57:33 | INFO     | app.auth | [OTP] Email sent successfully | email=wiem@rouissi.com purpose=email_verification
+2026-03-22 23:57:33 | INFO     | app.auth | [REGISTER] Success | email=wiem@rouissi.com
+2026-03-22 23:57:33 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=wiem@rouissi.com id=b5438643-c05e-40ed-b5c9-ec1987feb99a
+2026-03-22 23:57:57 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=wiem@rouissi.com
+2026-03-22 23:57:57 | INFO     | app.auth | [OTP] Consumed successfully | email=wiem@rouissi.com purpose=email_verification
+2026-03-22 23:57:57 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=wiem@rouissi.com id=b5438643-c05e-40ed-b5c9-ec1987feb99a
+2026-03-23 00:02:57 | INFO     | app.auth | [LOGIN] Attempt | email=wiem@rouissi.com
+2026-03-23 00:02:58 | INFO     | app.auth | [LOGIN] Success | email=wiem@rouissi.com id=b5438643-c05e-40ed-b5c9-ec1987feb99a role=UserRole.NURSE
+2026-03-23 00:02:58 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=wiem@rouissi.com id=b5438643-c05e-40ed-b5c9-ec1987feb99a
+2026-03-23 01:20:06 | INFO     | app.auth | [LOGIN] Attempt | email=test@exemple.com
+2026-03-23 01:20:06 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=test@exemple.com
+2026-03-23 01:20:29 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-03-23 01:20:29 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-03-23 01:20:29 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-03-23 01:20:59 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@example.com
+2026-03-23 01:20:59 | INFO     | app.auth | [LOGIN] Success | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c role=UserRole.PATIENT
+2026-03-23 01:20:59 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c
+2026-03-23 01:51:55 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@example.com
+2026-03-23 01:51:55 | INFO     | app.auth | [LOGIN] Success | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c role=UserRole.PATIENT
+2026-03-23 01:51:55 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@example.com id=1e51c91c-82bc-4cc3-9e6b-cb715552241c

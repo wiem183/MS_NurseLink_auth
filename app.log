@@ -1,0 +1,16 @@
+2026-03-04 02:06:30,541 | ERROR | app.services.profile_client | Could not reach profile service for user 5ae5e7d5-6460-4c86-92f1-bf9a7f4e0a7e: All connection attempts failed
+2026-03-04 02:11:57,014 | ERROR | app.services.profile_client | Could not reach profile service for user 271ba8dc-a3c2-4e1d-a496-24a6ede2a958: All connection attempts failed
+2026-03-04 13:31:29,776 | ERROR | app.services.profile_client | Could not reach profile service for user 7356e266-dfee-422c-8db7-41e6ed0c8646: All connection attempts failed
+2026-03-05 03:20:46,960 | ERROR | app.services.profile_client | Could not reach profile service for user 6252d754-31d0-492b-b93f-360e4eeb580f: All connection attempts failed
+2026-03-05 04:11:02,212 | ERROR | app.services.profile_client | Could not reach profile service for user a4845cd1-0f07-4880-abd2-62de76b06863: All connection attempts failed
+2026-03-05 12:45:50,618 | ERROR | app.services.profile_client | Could not reach profile service for user b5979e2b-2860-4a30-ba73-03954f2a66e4: All connection attempts failed
+2026-03-06 07:41:46,968 | ERROR | app.services.profile_client | Could not reach profile service for user fbed8d04-30f7-415f-9c37-0da46f331117: All connection attempts failed
+2026-03-06 14:04:33,874 | INFO | httpx | HTTP Request: POST http://localhost:8080/internal/profiles "HTTP/1.1 201 Created"
+2026-03-06 14:04:33,878 | INFO | app.services.profile_client | Profile created for user fcf33021-26b8-48ef-9aa7-f5fca8c9917a
+2026-03-06 14:08:58,034 | INFO | httpx | HTTP Request: POST http://localhost:8080/internal/profiles "HTTP/1.1 201 Created"
+2026-03-06 14:08:58,036 | INFO | app.services.profile_client | Profile created for user 8830da37-6409-4f36-8486-f79818bfd271
+2026-03-06 15:16:20,812 | INFO | httpx | HTTP Request: POST http://localhost:8080/internal/profiles "HTTP/1.1 201 Created"
+2026-03-06 15:16:20,817 | INFO | app.services.profile_client | Profile created for user 6b1e509c-0529-4a1f-bac9-81e0985624f9
+2026-03-08 21:54:31,451 | ERROR | app.services.profile_client | Could not reach profile service for user 43381f87-c29c-495b-af3a-6e31fc9f8ea2: All connection attempts failed
+2026-03-08 22:21:12,267 | ERROR | app.services.profile_client | Could not reach profile service for user a33a3ffd-437e-4cee-9a0a-e5d3011e6dfc: All connection attempts failed
+2026-03-08 23:07:24,738 | ERROR | app.services.profile_client | Could not reach profile service for user 4c283a74-a8b0-41b7-9bb4-ab1463b4325b: All connection attempts failed

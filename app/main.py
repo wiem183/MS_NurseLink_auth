@@ -1,6 +1,8 @@
+# app/main.py
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
+from app.core.logging_config import setup_logging
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -16,21 +18,19 @@ from app.routers import auth_router, users_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncGenerator:
-    # Startup: verify DB connectivity
     async with AsyncSessionLocal() as session:
         await session.execute(text("SELECT 1"))
     print(f" {settings.APP_NAME} started — DB connection OK.")
     yield
-    # Shutdown
     print(f" {settings.APP_NAME} shutting down.")
 
-
+setup_logging()
 # ── App factory ───────────────────────────────────────────────────────────────
 
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
-    description="Auth and user APIs. Use **Authorize** in Swagger to set your JWT (from `/auth/login` or `/auth/register`).",
+    description="Auth and user APIs. Use **Authorize** in Swagger to set your JWT.",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
@@ -46,7 +46,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -63,6 +63,7 @@ async def jwt_exception_handler(request: Request, exc: JWTError) -> JSONResponse
         headers={"WWW-Authenticate": "Bearer"},
     )
 
+
 @app.exception_handler(ValueError)
 async def value_error_handler(request: Request, exc: ValueError) -> JSONResponse:
     return JSONResponse(status_code=400, content={"detail": str(exc)})
@@ -78,4 +79,13 @@ app.include_router(users_router.router)
 
 @app.get("/health", tags=["Health"])
 async def health() -> dict:
-    return {"status": "ok", "service": settings.APP_NAME, "version": settings.APP_VERSION}
+    return {
+        "status": "ok",
+        "service": settings.APP_NAME,
+        "version": settings.APP_VERSION,
+    }
+
+
+@app.get("/")
+async def root() -> dict:
+    return {"status": "ok"}
