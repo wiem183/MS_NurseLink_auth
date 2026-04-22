@@ -1,0 +1,100 @@
+2026-03-30 17:09:36 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-30 17:09:36 | INFO     | app.auth | [REGISTER] Attempt | email=test@demo.com role=UserRole.NURSE
+2026-03-30 17:09:36 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-30 17:09:36 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-30 17:09:37 | INFO     | app.auth | [REGISTER] User created | id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0 email=test@demo.com role=UserRole.NURSE
+2026-03-30 17:09:37 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0 role=nurse
+2026-03-30 17:09:39 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"48a0a351-2814-4990-8bad-3b6f9ec0dfb0","role":"nurse"}
+2026-03-30 17:09:39 | INFO     | app.services.profile_client | Profile created successfully for user 48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:09:39 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:09:39 | INFO     | app.auth | [OTP] New OTP created | email=test@demo.com purpose=email_verification expires_in=30min
+2026-03-30 17:09:41 | INFO     | app.auth | [OTP] Email sent successfully | email=test@demo.com purpose=email_verification
+2026-03-30 17:09:41 | INFO     | app.auth | [REGISTER] Success | email=test@demo.com
+2026-03-30 17:09:41 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@demo.com id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:10:08 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=test@demo.com
+2026-03-30 17:10:08 | INFO     | app.auth | [OTP] Consumed successfully | email=test@demo.com purpose=email_verification
+2026-03-30 17:10:08 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=test@demo.com id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:15:41 | INFO     | app.auth | [LOGIN] Attempt | email=test@demo.com
+2026-03-30 17:15:41 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=test@demo.com id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:20:07 | INFO     | app.auth | [LOGIN] Attempt | email=test@demo.com
+2026-03-30 17:20:08 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=test@demo.com id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:24:10 | INFO     | app.auth | [LOGIN] Attempt | email=test@demo.com
+2026-03-30 17:24:11 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=test@demo.com id=48a0a351-2814-4990-8bad-3b6f9ec0dfb0
+2026-03-30 17:27:31 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-03-30 17:27:32 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-03-30 17:27:32 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-03-30 17:29:38 | INFO     | app.auth | [REGISTER] Attempt | email=ahmedkrid5@example.com role=UserRole.NURSE
+2026-03-30 17:29:38 | INFO     | app.auth | [REGISTER] User created | id=097fcff1-0130-4e2b-90e3-1856345fab61 email=ahmedkrid5@example.com role=UserRole.NURSE
+2026-03-30 17:29:38 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=097fcff1-0130-4e2b-90e3-1856345fab61 role=nurse
+2026-03-30 17:29:39 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"097fcff1-0130-4e2b-90e3-1856345fab61","role":"nurse"}
+2026-03-30 17:29:39 | INFO     | app.services.profile_client | Profile created successfully for user 097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 17:29:39 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 17:29:39 | INFO     | app.auth | [OTP] New OTP created | email=ahmedkrid5@example.com purpose=email_verification expires_in=30min
+2026-03-30 17:29:41 | INFO     | app.auth | [OTP] Email sent successfully | email=ahmedkrid5@example.com purpose=email_verification
+2026-03-30 17:29:41 | INFO     | app.auth | [REGISTER] Success | email=ahmedkrid5@example.com
+2026-03-30 17:29:41 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkrid5@example.com id=097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 17:30:08 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=ahmedkrid5@example.com
+2026-03-30 17:30:08 | INFO     | app.auth | [OTP] Consumed successfully | email=ahmedkrid5@example.com purpose=email_verification
+2026-03-30 17:30:08 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=ahmedkrid5@example.com id=097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 17:42:32 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkrid5@example.com
+2026-03-30 17:42:32 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=ahmedkrid5@example.com id=097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 18:00:21 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkrid5@example.com
+2026-03-30 18:00:21 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=ahmedkrid5@example.com id=097fcff1-0130-4e2b-90e3-1856345fab61
+2026-03-30 18:01:40 | INFO     | app.auth | [REGISTER] Attempt | email=bohboh@gmail.com role=UserRole.NURSE
+2026-03-30 18:01:40 | INFO     | app.auth | [REGISTER] User created | id=8cf71853-bf1b-487c-8092-4cf0723914f1 email=bohboh@gmail.com role=UserRole.NURSE
+2026-03-30 18:01:40 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=8cf71853-bf1b-487c-8092-4cf0723914f1 role=nurse
+2026-03-30 18:01:41 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"8cf71853-bf1b-487c-8092-4cf0723914f1","role":"nurse"}
+2026-03-30 18:01:41 | INFO     | app.services.profile_client | Profile created successfully for user 8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:01:41 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:01:41 | INFO     | app.auth | [OTP] New OTP created | email=bohboh@gmail.com purpose=email_verification expires_in=30min
+2026-03-30 18:01:43 | INFO     | app.auth | [OTP] Email sent successfully | email=bohboh@gmail.com purpose=email_verification
+2026-03-30 18:01:43 | INFO     | app.auth | [REGISTER] Success | email=bohboh@gmail.com
+2026-03-30 18:01:43 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=bohboh@gmail.com id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:01:55 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=bohboh@gmail.com
+2026-03-30 18:01:55 | INFO     | app.auth | [OTP] Consumed successfully | email=bohboh@gmail.com purpose=email_verification
+2026-03-30 18:01:55 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=bohboh@gmail.com id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:07:13 | INFO     | app.auth | [LOGIN] Attempt | email=bohboh@gmail.com
+2026-03-30 18:07:13 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=bohboh@gmail.com id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:09:14 | INFO     | app.auth | [LOGIN] Attempt | email=demo@client.com
+2026-03-30 18:09:14 | INFO     | app.auth | [LOGIN] Success | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503 role=UserRole.PATIENT
+2026-03-30 18:09:14 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503
+2026-03-30 18:10:24 | INFO     | app.auth | [LOGIN] Attempt | email=demo@client.com
+2026-03-30 18:10:25 | INFO     | app.auth | [LOGIN] Success | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503 role=UserRole.PATIENT
+2026-03-30 18:10:25 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503
+2026-03-30 18:21:00 | INFO     | app.auth | [LOGIN] Attempt | email=bohboh@gmail.com
+2026-03-30 18:21:00 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=bohboh@gmail.com id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:21:27 | INFO     | app.auth | [LOGIN] Attempt | email=demo@client.com
+2026-03-30 18:21:28 | INFO     | app.auth | [LOGIN] Success | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503 role=UserRole.PATIENT
+2026-03-30 18:21:28 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=demo@client.com id=760f1a28-bc5f-4461-8f29-a1afcbada503
+2026-03-30 18:22:11 | INFO     | app.auth | [LOGIN] Attempt | email=bohboh@gmail.com
+2026-03-30 18:22:12 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=bohboh@gmail.com id=8cf71853-bf1b-487c-8092-4cf0723914f1
+2026-03-30 18:23:16 | INFO     | app.auth | [REGISTER] Attempt | email=testtest@test.com role=UserRole.NURSE
+2026-03-30 18:23:16 | INFO     | app.auth | [REGISTER] User created | id=6e6cd404-3169-4ab5-b606-c1447793e6b4 email=testtest@test.com role=UserRole.NURSE
+2026-03-30 18:23:16 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=6e6cd404-3169-4ab5-b606-c1447793e6b4 role=nurse
+2026-03-30 18:23:18 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"6e6cd404-3169-4ab5-b606-c1447793e6b4","role":"nurse"}
+2026-03-30 18:23:18 | INFO     | app.services.profile_client | Profile created successfully for user 6e6cd404-3169-4ab5-b606-c1447793e6b4
+2026-03-30 18:23:18 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=6e6cd404-3169-4ab5-b606-c1447793e6b4
+2026-03-30 18:23:18 | INFO     | app.auth | [OTP] New OTP created | email=testtest@test.com purpose=email_verification expires_in=30min
+2026-03-30 18:23:20 | INFO     | app.auth | [OTP] Email sent successfully | email=testtest@test.com purpose=email_verification
+2026-03-30 18:23:20 | INFO     | app.auth | [REGISTER] Success | email=testtest@test.com
+2026-03-30 18:23:20 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=testtest@test.com id=6e6cd404-3169-4ab5-b606-c1447793e6b4
+2026-03-30 18:23:31 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=testtest@test.com
+2026-03-30 18:23:31 | INFO     | app.auth | [OTP] Consumed successfully | email=testtest@test.com purpose=email_verification
+2026-03-30 18:23:31 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=testtest@test.com id=6e6cd404-3169-4ab5-b606-c1447793e6b4
+2026-03-30 18:26:49 | INFO     | app.auth | [REGISTER] Attempt | email=wiem.wiem@gmail.com role=UserRole.NURSE
+2026-03-30 18:26:50 | INFO     | app.auth | [REGISTER] User created | id=cb712eea-141b-4502-8012-1d20dba8cf81 email=wiem.wiem@gmail.com role=UserRole.NURSE
+2026-03-30 18:26:50 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=cb712eea-141b-4502-8012-1d20dba8cf81 role=nurse
+2026-03-30 18:26:50 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"cb712eea-141b-4502-8012-1d20dba8cf81","role":"nurse"}
+2026-03-30 18:26:50 | INFO     | app.services.profile_client | Profile created successfully for user cb712eea-141b-4502-8012-1d20dba8cf81
+2026-03-30 18:26:50 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=cb712eea-141b-4502-8012-1d20dba8cf81
+2026-03-30 18:26:50 | INFO     | app.auth | [OTP] New OTP created | email=wiem.wiem@gmail.com purpose=email_verification expires_in=30min
+2026-03-30 18:26:53 | INFO     | app.auth | [OTP] Email sent successfully | email=wiem.wiem@gmail.com purpose=email_verification
+2026-03-30 18:26:53 | INFO     | app.auth | [REGISTER] Success | email=wiem.wiem@gmail.com
+2026-03-30 18:26:53 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=wiem.wiem@gmail.com id=cb712eea-141b-4502-8012-1d20dba8cf81
+2026-03-30 18:27:09 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=wiem.wiem@gmail.com
+2026-03-30 18:27:09 | INFO     | app.auth | [OTP] Consumed successfully | email=wiem.wiem@gmail.com purpose=email_verification
+2026-03-30 18:27:09 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=wiem.wiem@gmail.com id=cb712eea-141b-4502-8012-1d20dba8cf81
+2026-03-30 18:29:46 | INFO     | app.auth | [LOGIN] Attempt | email=wiem.wiem@gmail.com
+2026-03-30 18:29:47 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=wiem.wiem@gmail.com
+2026-03-30 18:30:03 | INFO     | app.auth | [LOGIN] Attempt | email=wiem.wiem@gmail.com
+2026-03-30 18:30:03 | WARNING  | app.auth | [LOGIN] Failed — account deactivated | email=wiem.wiem@gmail.com id=cb712eea-141b-4502-8012-1d20dba8cf81

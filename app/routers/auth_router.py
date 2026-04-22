@@ -4,7 +4,7 @@ import uuid
 from fastapi import APIRouter, Depends, Header, HTTPException, status
 
 from app.core.config import settings
-from app.core.dependencies import get_auth_service, get_user_service
+from app.core.dependencies import get_auth_service, get_user_service, get_token_service
 from app.guards.jwt_auth_guard import get_current_user
 from app.models.user import User
 from app.schemas.auth import AuthResponseDto, LoginDto, RegisterDto
@@ -19,6 +19,7 @@ from app.schemas.token import (
 from app.schemas.user import UserDto
 from app.services.auth_service import AuthService
 from app.services.user_service import UserService
+from app.services.token_service import TokenService
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -176,13 +177,9 @@ async def logout_all(
     await auth_service.logout_all(current_user.id)
 
 
-# ── Internal endpoints (microservice-to-microservice, no JWT) ─────────────────
 
 def _require_internal_key(x_internal_api_key: str = Header(...)) -> None:
-    """
-    Dependency that validates the shared internal API key.
-    Rejects with 403 if the header is missing or wrong.
-    """
+
     if x_internal_api_key != settings.INTERNAL_API_KEY:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -201,10 +198,7 @@ async def internal_activate_user(
     _key: None = Depends(_require_internal_key),
     user_service: UserService = Depends(get_user_service),
 ) -> UserDto:
-    """
-    Called by the KYC service when an admin approves a nurse's KYC.
-    Sets is_active = True so the nurse can log in.
-    """
+
     return await user_service.activate(user_id)
 
 
@@ -219,8 +213,12 @@ async def internal_deactivate_user(
     _key: None = Depends(_require_internal_key),
     user_service: UserService = Depends(get_user_service),
 ) -> UserDto:
-    """
-    Called by the KYC service when an admin rejects a nurse's KYC.
-    Sets is_active = False.
-    """
+
     return await user_service.deactivate(user_id)
+@router.post("/sos-token")
+async def get_sos_token(
+    current_user: User = Depends(get_current_user),
+    token_service: TokenService = Depends(get_token_service),
+):
+    sos_token = token_service.create_sos_token(current_user.id)
+    return {"sos_token": sos_token}

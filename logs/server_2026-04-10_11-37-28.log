@@ -1,0 +1,32 @@
+2026-04-10 12:02:09 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-04-10 12:02:09 | INFO     | app.auth | [REGISTER] Attempt | email=hichem@kahouli.com role=UserRole.NURSE
+2026-04-10 12:02:09 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-04-10 12:02:09 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-04-10 12:02:09 | INFO     | app.auth | [REGISTER] User created | id=43bf4bef-01b6-415b-a90c-355418f25a28 email=hichem@kahouli.com role=UserRole.NURSE
+2026-04-10 12:02:09 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8020/internal/profiles user_id=43bf4bef-01b6-415b-a90c-355418f25a28 role=nurse
+2026-04-10 12:02:15 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"43bf4bef-01b6-415b-a90c-355418f25a28","role":"nurse"}
+2026-04-10 12:02:15 | INFO     | app.services.profile_client | Profile created successfully for user 43bf4bef-01b6-415b-a90c-355418f25a28
+2026-04-10 12:02:15 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=43bf4bef-01b6-415b-a90c-355418f25a28
+2026-04-10 12:02:15 | INFO     | app.auth | [OTP] New OTP created | email=hichem@kahouli.com purpose=email_verification expires_in=30min
+2026-04-10 12:02:17 | INFO     | app.auth | [OTP] Email sent successfully | email=hichem@kahouli.com purpose=email_verification
+2026-04-10 12:02:17 | INFO     | app.auth | [REGISTER] Success | email=hichem@kahouli.com
+2026-04-10 12:02:17 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=hichem@kahouli.com id=43bf4bef-01b6-415b-a90c-355418f25a28
+2026-04-10 12:02:32 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=hichem@kahouli.com
+2026-04-10 12:02:32 | INFO     | app.auth | [OTP] Consumed successfully | email=hichem@kahouli.com purpose=email_verification
+2026-04-10 12:02:32 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=hichem@kahouli.com id=43bf4bef-01b6-415b-a90c-355418f25a28
+2026-04-10 12:05:26 | INFO     | app.auth | [LOGIN] Attempt | email=hichem@kahouli.com
+2026-04-10 12:05:26 | INFO     | app.auth | [LOGIN] Success | email=hichem@kahouli.com id=43bf4bef-01b6-415b-a90c-355418f25a28 role=UserRole.NURSE
+2026-04-10 12:05:26 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=hichem@kahouli.com id=43bf4bef-01b6-415b-a90c-355418f25a28
+2026-04-10 12:06:03 | INFO     | app.auth | [REGISTER] Attempt | email=Ahmeddkrid@gmail.com role=UserRole.NURSE
+2026-04-10 12:06:03 | INFO     | app.auth | [REGISTER] User created | id=e53361ee-5792-40a7-b0ff-7f3781d4b721 email=ahmeddkrid@gmail.com role=UserRole.NURSE
+2026-04-10 12:06:03 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8020/internal/profiles user_id=e53361ee-5792-40a7-b0ff-7f3781d4b721 role=nurse
+2026-04-10 12:06:06 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"e53361ee-5792-40a7-b0ff-7f3781d4b721","role":"nurse"}
+2026-04-10 12:06:06 | INFO     | app.services.profile_client | Profile created successfully for user e53361ee-5792-40a7-b0ff-7f3781d4b721
+2026-04-10 12:06:06 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=e53361ee-5792-40a7-b0ff-7f3781d4b721
+2026-04-10 12:06:06 | INFO     | app.auth | [OTP] New OTP created | email=ahmeddkrid@gmail.com purpose=email_verification expires_in=30min
+2026-04-10 12:06:08 | INFO     | app.auth | [OTP] Email sent successfully | email=ahmeddkrid@gmail.com purpose=email_verification
+2026-04-10 12:06:08 | INFO     | app.auth | [REGISTER] Success | email=ahmeddkrid@gmail.com
+2026-04-10 12:06:08 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmeddkrid@gmail.com id=e53361ee-5792-40a7-b0ff-7f3781d4b721
+2026-04-10 12:06:17 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=Ahmeddkrid@gmail.com
+2026-04-10 12:06:17 | INFO     | app.auth | [OTP] Consumed successfully | email=ahmeddkrid@gmail.com purpose=email_verification
+2026-04-10 12:06:17 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=Ahmeddkrid@gmail.com id=e53361ee-5792-40a7-b0ff-7f3781d4b721

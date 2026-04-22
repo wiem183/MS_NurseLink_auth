@@ -1,0 +1,22 @@
+2026-04-07 12:41:35 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-04-07 12:41:35 | INFO     | app.auth | [REGISTER] Attempt | email=riadhkrid1@example.com role=UserRole.NURSE
+2026-04-07 12:41:35 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-04-07 12:41:35 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-04-07 12:41:35 | INFO     | app.auth | [REGISTER] User created | id=ef785849-e6bc-41ec-b5a2-f363a35373e3 email=riadhkrid1@example.com role=UserRole.NURSE
+2026-04-07 12:41:35 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8020/internal/profiles user_id=ef785849-e6bc-41ec-b5a2-f363a35373e3 role=nurse
+2026-04-07 12:41:39 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"ef785849-e6bc-41ec-b5a2-f363a35373e3","role":"nurse"}
+2026-04-07 12:41:39 | INFO     | app.services.profile_client | Profile created successfully for user ef785849-e6bc-41ec-b5a2-f363a35373e3
+2026-04-07 12:41:39 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=ef785849-e6bc-41ec-b5a2-f363a35373e3
+2026-04-07 12:41:39 | INFO     | app.auth | [OTP] New OTP created | email=riadhkrid1@example.com purpose=email_verification expires_in=30min
+2026-04-07 12:41:42 | INFO     | app.auth | [OTP] Email sent successfully | email=riadhkrid1@example.com purpose=email_verification
+2026-04-07 12:41:42 | INFO     | app.auth | [REGISTER] Success | email=riadhkrid1@example.com
+2026-04-07 12:41:42 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=riadhkrid1@example.com id=ef785849-e6bc-41ec-b5a2-f363a35373e3
+2026-04-07 12:41:59 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=riadhkrid1@example.com
+2026-04-07 12:41:59 | INFO     | app.auth | [OTP] Consumed successfully | email=riadhkrid1@example.com purpose=email_verification
+2026-04-07 12:41:59 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=riadhkrid1@example.com id=ef785849-e6bc-41ec-b5a2-f363a35373e3
+2026-04-07 12:46:56 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-07 12:46:57 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-07 12:46:57 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-04-07 12:49:04 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-07 12:49:05 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-07 12:49:05 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2

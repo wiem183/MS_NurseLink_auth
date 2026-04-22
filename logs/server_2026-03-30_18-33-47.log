@@ -1,0 +1,66 @@
+2026-03-30 18:35:30 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-03-30 18:35:30 | INFO     | app.auth | [REGISTER] Attempt | email=ahmedkr@gmail.com role=UserRole.NURSE
+2026-03-30 18:35:30 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-03-30 18:35:30 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-03-30 18:35:31 | INFO     | app.auth | [REGISTER] User created | id=fc52d12c-3167-4560-bae1-c305a66a9533 email=ahmedkr@gmail.com role=UserRole.NURSE
+2026-03-30 18:35:31 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=fc52d12c-3167-4560-bae1-c305a66a9533 role=nurse
+2026-03-30 18:35:32 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"fc52d12c-3167-4560-bae1-c305a66a9533","role":"nurse"}
+2026-03-30 18:35:32 | INFO     | app.services.profile_client | Profile created successfully for user fc52d12c-3167-4560-bae1-c305a66a9533
+2026-03-30 18:35:32 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-03-30 18:35:32 | INFO     | app.auth | [OTP] New OTP created | email=ahmedkr@gmail.com purpose=email_verification expires_in=30min
+2026-03-30 18:35:34 | INFO     | app.auth | [OTP] Email sent successfully | email=ahmedkr@gmail.com purpose=email_verification
+2026-03-30 18:35:34 | INFO     | app.auth | [REGISTER] Success | email=ahmedkr@gmail.com
+2026-03-30 18:35:34 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-03-30 18:35:43 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=ahmedkr@gmail.com
+2026-03-30 18:35:43 | INFO     | app.auth | [OTP] Consumed successfully | email=ahmedkr@gmail.com purpose=email_verification
+2026-03-30 18:35:43 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-03-30 18:36:58 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkr@gmail.com
+2026-03-30 18:36:58 | INFO     | app.auth | [LOGIN] Success | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533 role=UserRole.NURSE
+2026-03-30 18:36:58 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-03-30 18:37:52 | INFO     | app.auth | [REGISTER] Attempt | email=oussema@krid.com role=UserRole.PATIENT
+2026-03-30 18:37:52 | WARNING  | app.auth | [REGISTER] Conflict — email already exists | email=oussema@krid.com
+2026-03-30 18:37:58 | INFO     | app.auth | [REGISTER] Attempt | email=oussema@krid1.com role=UserRole.PATIENT
+2026-03-30 18:37:58 | INFO     | app.auth | [REGISTER] User created | id=a7dc0c0e-acfb-4587-bba7-fee5d74cf029 email=oussema@krid1.com role=UserRole.PATIENT
+2026-03-30 18:37:58 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=a7dc0c0e-acfb-4587-bba7-fee5d74cf029 role=client
+2026-03-30 18:37:58 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"a7dc0c0e-acfb-4587-bba7-fee5d74cf029","role":"client"}
+2026-03-30 18:37:58 | INFO     | app.services.profile_client | Profile created successfully for user a7dc0c0e-acfb-4587-bba7-fee5d74cf029
+2026-03-30 18:37:58 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=a7dc0c0e-acfb-4587-bba7-fee5d74cf029
+2026-03-30 18:37:58 | INFO     | app.auth | [OTP] New OTP created | email=oussema@krid1.com purpose=email_verification expires_in=30min
+2026-03-30 18:38:01 | INFO     | app.auth | [OTP] Email sent successfully | email=oussema@krid1.com purpose=email_verification
+2026-03-30 18:38:01 | INFO     | app.auth | [REGISTER] Success | email=oussema@krid1.com
+2026-03-30 18:38:01 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=oussema@krid1.com id=a7dc0c0e-acfb-4587-bba7-fee5d74cf029
+2026-03-30 18:38:14 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=oussema@krid1.com
+2026-03-30 18:38:14 | INFO     | app.auth | [OTP] Consumed successfully | email=oussema@krid1.com purpose=email_verification
+2026-03-30 18:38:14 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=oussema@krid1.com id=a7dc0c0e-acfb-4587-bba7-fee5d74cf029
+2026-03-30 18:57:10 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-03-30 18:57:11 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-03-30 18:57:11 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-03-30 19:18:20 | INFO     | app.auth | [REGISTER] Attempt | email=test@yahoo.com role=UserRole.NURSE
+2026-03-30 19:18:21 | INFO     | app.auth | [REGISTER] User created | id=47070a2c-049c-419c-b578-a6405100f8f5 email=test@yahoo.com role=UserRole.NURSE
+2026-03-30 19:18:21 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=47070a2c-049c-419c-b578-a6405100f8f5 role=nurse
+2026-03-30 19:18:22 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"47070a2c-049c-419c-b578-a6405100f8f5","role":"nurse"}
+2026-03-30 19:18:22 | INFO     | app.services.profile_client | Profile created successfully for user 47070a2c-049c-419c-b578-a6405100f8f5
+2026-03-30 19:18:22 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=47070a2c-049c-419c-b578-a6405100f8f5
+2026-03-30 19:18:22 | INFO     | app.auth | [OTP] New OTP created | email=test@yahoo.com purpose=email_verification expires_in=30min
+2026-03-30 19:18:25 | INFO     | app.auth | [OTP] Email sent successfully | email=test@yahoo.com purpose=email_verification
+2026-03-30 19:18:25 | INFO     | app.auth | [REGISTER] Success | email=test@yahoo.com
+2026-03-30 19:18:25 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@yahoo.com id=47070a2c-049c-419c-b578-a6405100f8f5
+2026-03-30 19:18:54 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=test@yahoo.com
+2026-03-30 19:18:54 | INFO     | app.auth | [OTP] Consumed successfully | email=test@yahoo.com purpose=email_verification
+2026-03-30 19:18:54 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=test@yahoo.com id=47070a2c-049c-419c-b578-a6405100f8f5
+2026-03-30 19:21:02 | INFO     | app.auth | [LOGIN] Attempt | email=test@yahoo.com
+2026-03-30 19:21:02 | INFO     | app.auth | [LOGIN] Success | email=test@yahoo.com id=47070a2c-049c-419c-b578-a6405100f8f5 role=UserRole.NURSE
+2026-03-30 19:21:02 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@yahoo.com id=47070a2c-049c-419c-b578-a6405100f8f5
+2026-03-30 19:23:27 | INFO     | app.auth | [REGISTER] Attempt | email=client@gmail.com role=UserRole.PATIENT
+2026-03-30 19:23:28 | INFO     | app.auth | [REGISTER] User created | id=ce7cdd45-c383-4fc5-88ca-fdd19dd54d38 email=client@gmail.com role=UserRole.PATIENT
+2026-03-30 19:23:28 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8000/internal/profiles user_id=ce7cdd45-c383-4fc5-88ca-fdd19dd54d38 role=client
+2026-03-30 19:23:28 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"ce7cdd45-c383-4fc5-88ca-fdd19dd54d38","role":"client"}
+2026-03-30 19:23:28 | INFO     | app.services.profile_client | Profile created successfully for user ce7cdd45-c383-4fc5-88ca-fdd19dd54d38
+2026-03-30 19:23:28 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=ce7cdd45-c383-4fc5-88ca-fdd19dd54d38
+2026-03-30 19:23:28 | INFO     | app.auth | [OTP] New OTP created | email=client@gmail.com purpose=email_verification expires_in=30min
+2026-03-30 19:23:31 | INFO     | app.auth | [OTP] Email sent successfully | email=client@gmail.com purpose=email_verification
+2026-03-30 19:23:32 | INFO     | app.auth | [REGISTER] Success | email=client@gmail.com
+2026-03-30 19:23:32 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=client@gmail.com id=ce7cdd45-c383-4fc5-88ca-fdd19dd54d38
+2026-03-30 19:23:49 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=client@gmail.com
+2026-03-30 19:23:49 | INFO     | app.auth | [OTP] Consumed successfully | email=client@gmail.com purpose=email_verification
+2026-03-30 19:23:49 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=client@gmail.com id=ce7cdd45-c383-4fc5-88ca-fdd19dd54d38

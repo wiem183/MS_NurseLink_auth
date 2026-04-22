@@ -1,0 +1,59 @@
+2026-04-21 12:08:37 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-04-21 12:08:37 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-21 12:08:37 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-04-21 12:08:37 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-04-21 12:08:38 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-21 12:08:38 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-04-21 12:11:57 | INFO     | app.auth | [LOGIN] Attempt | email=Ahmed@krid.com
+2026-04-21 12:11:57 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-21 12:11:57 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
+2026-04-21 12:12:17 | INFO     | app.auth | [LOGIN] Attempt | email=Ahmed@krid.com
+2026-04-21 12:12:17 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-21 12:12:17 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
+2026-04-21 12:15:29 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkr@gmail.com
+2026-04-21 12:15:29 | INFO     | app.auth | [LOGIN] Success | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533 role=UserRole.NURSE
+2026-04-21 12:15:29 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-04-21 14:11:48 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-21 14:11:48 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ahmed@krid.com
+2026-04-21 14:11:53 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-21 14:11:54 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-21 14:11:54 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
+2026-04-21 14:12:37 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkr@gmail.com
+2026-04-21 14:12:38 | INFO     | app.auth | [LOGIN] Success | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533 role=UserRole.NURSE
+2026-04-21 14:12:38 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-04-21 14:13:03 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-21 14:13:03 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-21 14:13:03 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-04-21 14:23:00 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-21 14:23:00 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-21 14:23:00 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
+2026-04-21 14:24:21 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-21 14:24:22 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-21 14:24:22 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-04-21 14:25:55 | INFO     | app.auth | [LOGIN] Attempt | email=ahmedkr@gmail.com
+2026-04-21 14:25:55 | INFO     | app.auth | [LOGIN] Success | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533 role=UserRole.NURSE
+2026-04-21 14:25:55 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmedkr@gmail.com id=fc52d12c-3167-4560-bae1-c305a66a9533
+2026-04-22 12:04:18 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-22 12:04:18 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=ahmed@krid.com
+2026-04-22 12:04:20 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
+2026-04-22 12:04:20 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
+2026-04-22 12:04:21 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
+2026-04-22 12:06:55 | INFO     | app.auth | [LOGIN] Attempt | email=testtest@example.com
+2026-04-22 12:06:55 | INFO     | app.auth | [LOGIN] Success | email=testtest@example.com id=6252d754-31d0-492b-b93f-360e4eeb580f role=UserRole.PATIENT
+2026-04-22 12:06:55 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=testtest@example.com id=6252d754-31d0-492b-b93f-360e4eeb580f
+2026-04-22 12:08:05 | INFO     | app.auth | [REGISTER] Attempt | email=demodemo@test.com role=UserRole.NURSE
+2026-04-22 12:08:06 | INFO     | app.auth | [REGISTER] User created | id=472adfec-4190-4eef-a17b-52b7fec3c421 email=demodemo@test.com role=UserRole.NURSE
+2026-04-22 12:08:06 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8020/internal/profiles user_id=472adfec-4190-4eef-a17b-52b7fec3c421 role=nurse
+2026-04-22 12:08:08 | INFO     | app.services.profile_client | Profile service response | status=201 body={"status":"ok","user_id":"472adfec-4190-4eef-a17b-52b7fec3c421","role":"nurse"}
+2026-04-22 12:08:08 | INFO     | app.services.profile_client | Profile created successfully for user 472adfec-4190-4eef-a17b-52b7fec3c421
+2026-04-22 12:08:08 | DEBUG    | app.auth | [REGISTER] Profile service notified | user_id=472adfec-4190-4eef-a17b-52b7fec3c421
+2026-04-22 12:08:08 | INFO     | app.auth | [OTP] New OTP created | email=demodemo@test.com purpose=email_verification expires_in=30min
+2026-04-22 12:08:10 | INFO     | app.auth | [OTP] Email sent successfully | email=demodemo@test.com purpose=email_verification
+2026-04-22 12:08:10 | INFO     | app.auth | [REGISTER] Success | email=demodemo@test.com
+2026-04-22 12:08:10 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=demodemo@test.com id=472adfec-4190-4eef-a17b-52b7fec3c421
+2026-04-22 12:09:18 | INFO     | app.auth | [VERIFY_EMAIL] Attempt | email=demodemo@test.com
+2026-04-22 12:09:18 | INFO     | app.auth | [OTP] Consumed successfully | email=demodemo@test.com purpose=email_verification
+2026-04-22 12:09:18 | INFO     | app.auth | [VERIFY_EMAIL] Success | email=demodemo@test.com id=472adfec-4190-4eef-a17b-52b7fec3c421
+2026-04-22 13:10:48 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-22 13:10:49 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-22 13:10:49 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f

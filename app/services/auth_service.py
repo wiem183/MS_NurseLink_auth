@@ -61,9 +61,8 @@ class AuthService:
                 detail="A user with that email already exists.",
             )
 
-        # Nurses must complete KYC before logging in → start inactive.
-        # Patients and Admins are immediately active.
-        is_active = dto.role != UserRole.NURSE
+        # Always set is_active to True for all users, regardless of role
+        is_active = True
 
         user = User(
             email=dto.email.lower(),

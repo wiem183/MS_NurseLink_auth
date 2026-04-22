@@ -10,7 +10,6 @@ from app.schemas.auth import JwtPayload
 
 
 class TokenService:
-    # ── Access token ──────────────────────────────────────────────────────────
 
     def create_access_token(
         self,
@@ -18,21 +17,14 @@ class TokenService:
         role: str,
         user_created_at: datetime | None = None,
     ) -> str:
-        """Sign and return a short-lived JWT access token.
-
-        Other services sometimes need the original user creation timestamp
-        (not the token issuance time).  If ``user_created_at`` is provided
-        it will be encoded as ``created_at`` in the payload as a unix
-        timestamp.
-        """
-        now = datetime.now(tz=timezone.utc)
+        now    = datetime.now(tz=timezone.utc)
         expire = now + timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
 
         payload: dict[str, object] = {
-            "sub": str(user_id),
+            "sub":  str(user_id),
             "role": role,
-            "iat": int(now.timestamp()),
-            "exp": int(expire.timestamp()),
+            "iat":  int(now.timestamp()),
+            "exp":  int(expire.timestamp()),
         }
         if user_created_at is not None:
             payload["created_at"] = int(user_created_at.replace(tzinfo=timezone.utc).timestamp())
@@ -40,32 +32,39 @@ class TokenService:
         return jwt.encode(payload, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
 
     def verify_access_token(self, token: str) -> JwtPayload:
-        """
-        Decode and validate a JWT access token.
-        Raises jose.JWTError (→ caught by the guard and re-raised as 401).
-        """
         try:
-            raw = jwt.decode(
-                token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM]
-            )
+            raw = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
         except JWTError as exc:
-            raise exc  # guard converts this to HTTP 401
-
+            raise exc
         return JwtPayload(**raw)
 
-    # ── Refresh token ─────────────────────────────────────────────────────────
+    def create_sos_token(self, user_id: uuid.UUID) -> str:
+        now    = datetime.now(tz=timezone.utc)
+        expire = now + timedelta(hours=24)
+
+        payload: dict[str, object] = {
+            "sub":   str(user_id),
+            "scope": "sos_only",
+            "iat":   int(now.timestamp()),
+            "exp":   int(expire.timestamp()),
+        }
+        return jwt.encode(payload, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
+
+    def verify_sos_token(self, token: str) -> dict:
+        try:
+            raw = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
+        except JWTError as exc:
+            raise exc
+        if raw.get("scope") != "sos_only":
+            raise JWTError("Not a SOS token")
+        return raw
 
     async def create_refresh_token(
         self,
         user_id: uuid.UUID,
         repo: RefreshTokenRepository,
     ) -> str:
-        """
-        Generate a random opaque refresh token, persist it, and return the
-        raw value (stored/sent to client; only the raw value is stored, not hashed,
-        because we need to look it up directly — keep DB encrypted at rest).
-        """
-        raw_token = str(uuid.uuid4())  # opaque, random
+        raw_token  = str(uuid.uuid4())
         expires_at = datetime.utcnow() + timedelta(days=settings.REFRESH_TOKEN_EXPIRE_DAYS)
 
         rt = RefreshToken(
@@ -83,11 +82,6 @@ class TokenService:
         raw_token: str,
         repo: RefreshTokenRepository,
     ) -> RefreshToken:
-        """
-        Validate a refresh token string.
-        Returns the RefreshToken ORM object so the caller can rotate / revoke it.
-        Raises ValueError with a descriptive message on any failure.
-        """
         rt = await repo.find_by_token(raw_token)
 
         if rt is None:
@@ -105,6 +99,5 @@ class TokenService:
         user_id: uuid.UUID,
         repo: RefreshTokenRepository,
     ) -> str:
-        """Revoke the old token and issue a fresh one (token rotation)."""
         await repo.revoke(old_token)
         return await self.create_refresh_token(user_id, repo)

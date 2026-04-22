@@ -24,15 +24,15 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: list[str] = ["*"]
 
     # Profile microservice
-    PROFILE_SERVICE_URL: str = "http://localhost:8000"
+    PROFILE_SERVICE_URL: str = "http://localhost:8020"
     INTERNAL_API_KEY: str = "02704bbc412e81b76f28c0e14a7a8263db15c43e144b10df9c65e254518c2d1a"
 
     # ── SMTP (email sending) ───────────────────────────────────────────────
     SMTP_HOST: str = "sandbox.smtp.mailtrap.io"
     SMTP_PORT: int = 587
-    SMTP_USER: str          # your Gmail address
-    SMTP_PASSWORD: str      # your 16-char Gmail App Password
-    SMTP_FROM: str          # e.g. "NurseLink <yourname@gmail.com>"
+    SMTP_USER: str
+    SMTP_PASSWORD: str
+    SMTP_FROM: str
 
     # ── OTP settings ──────────────────────────────────────────────────────
     OTP_EXPIRE_MINUTES: int = 10

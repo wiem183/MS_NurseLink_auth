@@ -1,0 +1,11 @@
+2026-04-17 01:52:06 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2026-04-17 01:52:06 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
+2026-04-17 01:52:06 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
+2026-04-17 01:52:06 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
+2026-04-17 01:52:07 | INFO     | app.auth | [LOGIN] Success | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f role=UserRole.NURSE
+2026-04-17 01:52:07 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=test@example.com id=24091c86-0e7d-476c-acf1-f5f04d25e85f
+2026-04-17 01:52:54 | INFO     | app.auth | [REGISTER] Attempt | email=chaima@zouari.com role=UserRole.NURSE
+2026-04-17 01:52:54 | WARNING  | app.auth | [REGISTER] Conflict — email already exists | email=chaima@zouari.com
+2026-04-17 01:53:08 | INFO     | app.auth | [LOGIN] Attempt | email=chaima@zouari.com
+2026-04-17 01:53:08 | INFO     | app.auth | [LOGIN] Success | email=chaima@zouari.com id=938477bd-f88c-4b1a-bcb5-1361df1f3489 role=UserRole.NURSE
+2026-04-17 01:53:08 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=chaima@zouari.com id=938477bd-f88c-4b1a-bcb5-1361df1f3489
