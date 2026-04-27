@@ -1,9 +1,0 @@
-2026-04-20 14:14:44 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-2026-04-20 14:14:44 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
-2026-04-20 14:14:44 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
-2026-04-20 14:14:44 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
-2026-04-20 14:14:45 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
-2026-04-20 14:14:45 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2
-2026-04-20 14:15:39 | INFO     | app.auth | [LOGIN] Attempt | email=ahmed@krid.com
-2026-04-20 14:15:39 | INFO     | app.auth | [LOGIN] Success | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2 role=UserRole.PATIENT
-2026-04-20 14:15:39 | DEBUG    | app.auth | [TOKEN] Issued access + refresh | email=ahmed@krid.com id=43381f87-c29c-495b-af3a-6e31fc9f8ea2

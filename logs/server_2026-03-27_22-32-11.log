@@ -1,7 +1,0 @@
-2026-03-27 22:32:14 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-2026-03-27 22:32:14 | INFO     | app.auth | [REGISTER] Attempt | email=riadh.krid@example.com role=UserRole.NURSE
-2026-03-27 22:32:14 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
-2026-03-27 22:32:14 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
-2026-03-27 22:32:15 | INFO     | app.auth | [REGISTER] User created | id=9a906b60-4a91-4a94-934c-5b79b268725f email=riadh.krid@example.com role=UserRole.NURSE
-2026-03-27 22:32:15 | INFO     | app.services.profile_client | Notifying profile service | url=http://localhost:8080/internal/profiles user_id=9a906b60-4a91-4a94-934c-5b79b268725f role=nurse
-2026-03-27 22:32:17 | ERROR    | app.services.profile_client | Could not reach profile service for user 9a906b60-4a91-4a94-934c-5b79b268725f: All connection attempts failed

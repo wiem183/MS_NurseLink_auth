@@ -1,5 +1,0 @@
-2026-03-30 13:06:36 | DEBUG    | passlib.registry | registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
-2026-03-30 13:06:36 | INFO     | app.auth | [LOGIN] Attempt | email=test@example.com
-2026-03-30 13:06:36 | DEBUG    | passlib.handlers.bcrypt | detected 'bcrypt' backend, version '4.0.1'
-2026-03-30 13:06:36 | DEBUG    | passlib.handlers.bcrypt | 'bcrypt' backend lacks $2$ support, enabling workaround
-2026-03-30 13:06:36 | WARNING  | app.auth | [LOGIN] Failed — invalid credentials | email=test@example.com

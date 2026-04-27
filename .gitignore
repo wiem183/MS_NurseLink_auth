@@ -1,5 +1,72 @@
-.env
-.env.example
-.venv/
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio / .NET
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspscc
+*.vsscc
+bin/
+obj/
+TestResults/
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.tlog
+*.obj
+*.pch
+*.pdb
+*.ipch
+*.userprefs
+_ReSharper*/
+*.DotSettings.user
+*.DotSettings
+
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+env/
+.venv1/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# IDE/editor directories
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.pid
+*.swp
+*~
+
+# Docker
+docker-compose.override.yml
+
+# Build artifacts
+dist/
+.deploy/
+
+# Secrets
+.env
+.env.*
+weights/
+
+# Project specific
+uploads/
+alembic_output.txt
